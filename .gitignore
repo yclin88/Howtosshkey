@@ -1,0 +1,12 @@
+# Qt build artifacts
+*.o
+moc_*.cpp
+moc_predefs.h
+SpinBoxSliderApp
+Makefile
+.qmake.stash
+
+# Temporary files
+*~
+*.swp
+*.tmp
