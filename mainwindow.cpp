@@ -27,11 +27,15 @@ void MainWindow::setupUI()
     centralWidget = new QWidget(this);
     setCentralWidget(centralWidget);
     
+    // Set dark background color for the central widget
+    centralWidget->setStyleSheet("background-color: #2b2b2b;");
+    
     mainLayout = new QVBoxLayout(centralWidget);
     
     // Create SpinBox section
     spinBoxLayout = new QHBoxLayout();
     spinBoxLabel = new QLabel("SpinBox:", this);
+    spinBoxLabel->setStyleSheet("color: #e0e0e0;");
     spinBox = new QSpinBox(this);
     spinBox->setRange(0, 100);
     spinBox->setValue(50);
@@ -43,6 +47,7 @@ void MainWindow::setupUI()
     // Create Slider section
     sliderLayout = new QHBoxLayout();
     sliderLabel = new QLabel("Slider:", this);
+    sliderLabel->setStyleSheet("color: #e0e0e0;");
     slider = new QSlider(Qt::Horizontal, this);
     slider->setRange(0, 100);
     slider->setValue(50);
@@ -53,7 +58,7 @@ void MainWindow::setupUI()
     // Create value display label
     valueLabel = new QLabel("Current Value: 50", this);
     valueLabel->setAlignment(Qt::AlignCenter);
-    valueLabel->setStyleSheet("font-size: 14px; font-weight: bold; color: blue;");
+    valueLabel->setStyleSheet("font-size: 14px; font-weight: bold; color: #4da6ff;");
     
     // Add all layouts to main layout
     mainLayout->addLayout(spinBoxLayout);
